@@ -36,6 +36,7 @@ var passed = 0;
 var finish = false;
 
 function parse(line) {
+  if (typeof line !== 'string') line = line + '';
   if (line.indexOf('ok') === 0) {
     passed += 1;
     return;
