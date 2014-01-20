@@ -1,6 +1,6 @@
 {
   "name": "tap-browser-color",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A simple reporter for tap/tape that makes the body tag yellow/red/green if pending/failing/passing. Useful for live-coding environments.",
   "main": "index.js",
   "scripts": {
