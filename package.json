@@ -1,0 +1,22 @@
+{
+  "name": "tap-browser-color",
+  "version": "0.1.0",
+  "description": "A simple reporter for tap/tape that makes the body tag yellow/red/green if pending/failing/passing. Useful for live-coding environments.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kirbysayshi/tap-browser-color"
+  },
+  "keywords": [
+    "tape",
+    "tap",
+    "browser",
+    "color",
+    "reporter"
+  ],
+  "author": "Andrew Petersen <senofpeter@gmail.com>",
+  "license": "MIT"
+}
