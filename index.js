@@ -6,6 +6,7 @@
 module.exports = function() {
   var olog = console.log;
   var pre = document.body.appendChild(document.createElement('pre'));
+  style(); // Apply initial pending style.
   console.log = function(line) {
     parse(line);
     style();
