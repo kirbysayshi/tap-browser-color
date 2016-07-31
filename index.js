@@ -11,7 +11,7 @@ module.exports = function() {
     parse(line);
     style();
     olog.apply(console, arguments);
-    pre.innerHTML += line + '\n';
+    pre.appendChild(document.createTextNode(line + '\n'));
   }
 
   return function undo() {
@@ -51,10 +51,16 @@ function parse(line) {
 function style() {
   var s = document.body.style;
   if (failed > 0) {
-    s.backgroundColor = colors.FAILING;
+    if (s.backgroundColor !== colors.FAILING) {
+      s.backgroundColor = colors.FAILING;
+    }
   } else if (passed > 0 && failed === 0) {
-    s.backgroundColor = colors.PASSING;
+    if (s.backgroundColor !== colors.PASSING) {
+      s.backgroundColor = colors.PASSING;
+    }
   } else {
-    s.backgroundColor = colors.PENDING;
+    if (s.backgroundColor !== colors.PENDING) {
+      s.backgroundColor = colors.PENDING;
+    }
   }
 }
